@@ -1,0 +1,16 @@
+
+<h2> {{ isEditMode() ? 'Edit Post': 'New Post' }}</h2>
+<div class="form-section">
+  <form #courseForm="ngForm" (submit)="onSubmit()" class="form-row">
+    <mat-form-field id="title-form-field" class="short-text-field">
+      <input [(ngModel)]="post.title" matInput name="title" placeholder="Title" required>
+    </mat-form-field>
+    <mat-form-field id="description-form-field" class="long-text-field">
+      <input [(ngModel)]="post.content" matInput name="content" placeholder="Content" required>
+    </mat-form-field>
+    <ng-container>
+      <button color="primary" mat-raised-button>{{ isEditMode() ? 'Update' : 'Add'}}</button>
+      <button (click)="onCancel()" color="warn" mat-raised-button>Cancel</button>
+    </ng-container>
+  </form>
+</div>
