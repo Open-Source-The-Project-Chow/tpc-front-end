@@ -1,0 +1,18 @@
+{
+  "post": [
+    {
+      "id": 1,
+      "userName": "Gabo",
+      "title": "Post 1",
+      "date": "02/09/2024",
+      "content": "Content of post 1"
+    },
+    {
+      "id": 2,
+      "userName": "Gabo",
+      "title": "Post 2",
+      "date": "02/09/2024",
+      "content": "Content of post 2"
+    }
+  ]
+}
