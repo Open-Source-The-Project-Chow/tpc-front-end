@@ -2,13 +2,17 @@ import {Component, EventEmitter, Input, input, Output, ViewChild} from '@angular
 import {Post} from "../../model/post.entity";
 import {FormsModule, NgForm} from "@angular/forms";
 import {MatFormField} from "@angular/material/form-field";
+import {MatInput} from "@angular/material/input";
+import {MatButton} from "@angular/material/button";
 
 @Component({
   selector: 'app-post-create',
   standalone: true,
   imports: [
-    MatFormField,
-    FormsModule
+    MatButton,
+    MatInput,
+    FormsModule,
+    MatFormField
   ],
   templateUrl: './post-create.component.html',
   styleUrl: './post-create.component.css'

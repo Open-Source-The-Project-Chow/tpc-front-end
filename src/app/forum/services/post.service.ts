@@ -6,6 +6,6 @@ import {Post} from "../model/post.entity";
 export class PostService extends BaseService<Post>{
   constructor() {
     super();
-    this.resourceEndpoint = 'post';
+    this.resourceEndpoint = '/post';
   }
 }
