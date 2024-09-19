@@ -23,7 +23,7 @@ export class PageNotFoundComponent implements OnInit{
   }
 
   ngOnInit(): void {
-    this.invalidPath = window.location.pathname;
+    this.invalidPath = this.route.snapshot.url.map(url => url.path).join('/');
   }
   protected onNavigateHome() {
     this.router.navigate(['forum']).then();

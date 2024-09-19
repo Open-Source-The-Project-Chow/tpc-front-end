@@ -1,4 +1,4 @@
-import {Component, EventEmitter, Input, input, Output, ViewChild} from '@angular/core';
+import {Component, EventEmitter, Input, Output, ViewChild} from '@angular/core';
 import {Post} from "../../model/post.entity";
 import {FormsModule, NgForm} from "@angular/forms";
 import {MatFormField} from "@angular/material/form-field";

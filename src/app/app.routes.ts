@@ -4,9 +4,9 @@ import {PostManagementComponent} from "./forum/pages/post-management/post-manage
 
 export const routes: Routes = [
   { path: 'item', component: PageNotFoundComponent},
-  { path: 'inventory', component: PostManagementComponent},
-  { path: 'profile', component: PostManagementComponent},
+  { path: 'inventory', component: PageNotFoundComponent},
+  { path: 'profile', component: PageNotFoundComponent},
   { path: 'forum', component: PostManagementComponent},
-  { path: '',                 redirectTo: 'forum', pathMatch: 'full'},
+  { path: '',                 redirectTo: 'item', pathMatch: 'full'},
   { path: '**',               component: PageNotFoundComponent}
 ];
