@@ -1,13 +1,15 @@
 import {Component, Input} from '@angular/core';
 import {Post} from "../../model/post.entity";
 import {
-  MatCard, MatCardAvatar,
+  MatCard, MatCardActions, MatCardAvatar,
   MatCardContent,
   MatCardHeader, MatCardImage,
   MatCardTitle,
   MatCardTitleGroup
 } from "@angular/material/card";
 import {NgStyle} from "@angular/common";
+import {MatButton} from "@angular/material/button";
+import {RouterLink} from "@angular/router";
 
 @Component({
   selector: 'app-post-item',
@@ -20,7 +22,10 @@ import {NgStyle} from "@angular/common";
     MatCardContent,
     MatCardAvatar,
     NgStyle,
-    MatCardImage
+    MatCardImage,
+    MatCardActions,
+    MatButton,
+    RouterLink
   ],
   templateUrl: './post-item.component.html',
   styleUrl: './post-item.component.css'

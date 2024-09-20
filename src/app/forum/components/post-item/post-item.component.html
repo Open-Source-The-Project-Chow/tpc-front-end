@@ -1,4 +1,5 @@
 <mat-card class="article-card">
+  <button mat-button class="top-right-button" [routerLink]="['/post-view', post.id]">Open</button>
   <div class="header-wrapper">
     <img mat-card-avatar [src]="post.image" alt="Post Image">
     <div class="user-info">
