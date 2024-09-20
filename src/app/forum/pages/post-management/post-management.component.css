@@ -1,12 +1,16 @@
-.table-wrapper {
-  width: 1024px;
-  margin: 50px auto;
-}
 
-table {
+.container {
+  display: flex;
+  justify-content: right;
   width: 100%;
 }
 
-tr.editable-row {
-  background-color: lightblue;
+.items {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 70%;
+}
+.items > * {
+  width: 100%;
 }

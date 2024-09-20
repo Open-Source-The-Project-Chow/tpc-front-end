@@ -1,3 +1,7 @@
-<ng-container *ngIf="dataSource">
-  <app-post-item *ngFor="let post of dataSource.data" [post]="post"></app-post-item>
-</ng-container>
+<div class="container">
+  <div class="items">
+    <ng-container *ngIf="dataSource">
+      <app-post-item *ngFor="let post of dataSource.data" [post]="post"></app-post-item>
+    </ng-container>
+  </div>
+</div>
