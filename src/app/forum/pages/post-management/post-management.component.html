@@ -3,6 +3,7 @@
     <button mat-button class="new-post-button" (click)="openCreatePostDialog()">New Post</button>
     <div class="search-filters">
       <div class="filter-section">
+        <span>Search by Filters</span>
         <span>Date of Posting</span>
         <button mat-icon-button>
           <mat-icon>arrow_upward</mat-icon>
@@ -21,7 +22,7 @@
   <div class="right-panel">
     <div class="items">
       <ng-container *ngIf="dataSource">
-        <app-post-item *ngFor="let post of dataSource.data" [post]="post"></app-post-item>
+        <app-post-item *ngFor="let post of dataSource.data" [post]="post" ></app-post-item>
       </ng-container>
     </div>
   </div>
