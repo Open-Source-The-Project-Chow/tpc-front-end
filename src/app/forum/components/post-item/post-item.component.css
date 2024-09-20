@@ -97,9 +97,9 @@ img[mat-card-avatar] {
 }
 
 .content-image {
-  width: 150px; /* Ajusta el tamaño de la imagen según sea necesario */
+  width: 170px;
   height: auto;
-  margin-right: 20px; /* Espacio entre la imagen y el texto */
+  margin-right: 25px;
 }
 
 .content-text {
