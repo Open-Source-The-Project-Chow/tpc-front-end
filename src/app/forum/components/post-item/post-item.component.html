@@ -1,12 +1,16 @@
 <mat-card class="article-card">
-  <mat-card-header>
-    <mat-card-title-group>
+  <div class="header-wrapper">
+    <img mat-card-avatar [src]="post.image" alt="Post Image">
+    <div class="user-info">
       <mat-card-title>{{ post.userName }}</mat-card-title>
-    </mat-card-title-group>
-  </mat-card-header>
-  <mat-card-content>
-    <p> {{ post.title }}</p>
-    <p> {{ post.date }}</p>
-    <p> {{ post.content }}</p>
+      <mat-card-title>{{ post.date }}</mat-card-title>
+    </div>
+  </div>
+  <mat-card-content class="content-wrapper">
+    <img mat-card-image [src]="post.thingImage" alt="Post Image" class="content-image">
+    <div class="content-text">
+      <p>{{ post.title }}</p>
+      <p>{{ post.content }}</p>
+    </div>
   </mat-card-content>
 </mat-card>

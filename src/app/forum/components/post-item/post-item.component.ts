@@ -1,6 +1,13 @@
 import {Component, Input} from '@angular/core';
 import {Post} from "../../model/post.entity";
-import {MatCard, MatCardContent, MatCardHeader, MatCardTitle, MatCardTitleGroup} from "@angular/material/card";
+import {
+  MatCard, MatCardAvatar,
+  MatCardContent,
+  MatCardHeader, MatCardImage,
+  MatCardTitle,
+  MatCardTitleGroup
+} from "@angular/material/card";
+import {NgStyle} from "@angular/common";
 
 @Component({
   selector: 'app-post-item',
@@ -10,7 +17,10 @@ import {MatCard, MatCardContent, MatCardHeader, MatCardTitle, MatCardTitleGroup}
     MatCardTitleGroup,
     MatCardHeader,
     MatCard,
-    MatCardContent
+    MatCardContent,
+    MatCardAvatar,
+    NgStyle,
+    MatCardImage
   ],
   templateUrl: './post-item.component.html',
   styleUrl: './post-item.component.css'
