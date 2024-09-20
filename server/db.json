@@ -3,16 +3,29 @@
     {
       "id": 1,
       "userName": "Gabo",
-      "title": "Post 1",
+      "image": "https://ugc.production.linktr.ee/7AmdO4rWQH6kCSKpiyxC_XODYSjZg85IuyRah?io=true&size=avatar-v3_0",
+      "title": "Diego Flores Avalos",
       "date": "02/09/2024",
-      "content": "Content of post 1"
+      "thingImage": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_nC4S-SYm-Lm5wtK0YBGSU6yKsZkaTZlaEA&s",
+      "content": "Esta imagen representa a un cholo, un símbolo cultural que refleja la identidad y el estilo de vida de una comunidad. Con su vestimenta característica, que incluye pantalones anchos y camisetas de colores vibrantes, el cholo encarna una mezcla de tradición y modernidad. Su postura y expresión transmiten confianza y orgullo, destacando la rica herencia cultural que representa. Esta representación visual es ideal para quienes buscan apreciar y celebrar la diversidad cultural."
     },
     {
       "id": 2,
       "userName": "Gabo",
-      "title": "Post 2",
+      "image": "https://ugc.production.linktr.ee/7AmdO4rWQH6kCSKpiyxC_XODYSjZg85IuyRah?io=true&size=avatar-v3_0",
+      "title": "Jorge Diaz Malca",
       "date": "02/09/2024",
-      "content": "Content of post 2"
+      "thingImage": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_nC4S-SYm-Lm5wtK0YBGSU6yKsZkaTZlaEA&s",
+      "content": "Esta imagen representa a un cholo, un símbolo cultural que refleja la identidad y el estilo de vida de una comunidad. Con su vestimenta característica, que incluye pantalones anchos y camisetas de colores vibrantes, el cholo encarna una mezcla de tradición y modernidad. Su postura y expresión transmiten confianza y orgullo, destacando la rica herencia cultural que representa. Esta representación visual es ideal para quienes buscan apreciar y celebrar la diversidad cultural."
+    },
+    {
+      "id": 3,
+      "userName": "Gabdawo",
+      "image": "https://ugc.production.linktr.ee/7AmdO4rWQH6kCSKpiyxC_XODYSjZg85IuyRah?io=true&size=avatar-v3_0",
+      "title": "Cholo 3",
+      "date": "02/09/2024",
+      "thingImage": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_nC4S-SYm-Lm5wtK0YBGSU6yKsZkaTZlaEA&s",
+      "content": "Esta imagen representa a un cholo, un símbolo cultural que refleja la identidad y el estilo de vida de una comunidad. Con su vestimenta característica, que incluye pantalones anchos y camisetas de colores vibrantes, el cholo encarna una mezcla de tradición y modernidad. Su postura y expresión transmiten confianza y orgullo, destacando la rica herencia cultural que representa. Esta representación visual es ideal para quienes buscan apreciar y celebrar la diversidad cultural."
     }
   ]
 }
