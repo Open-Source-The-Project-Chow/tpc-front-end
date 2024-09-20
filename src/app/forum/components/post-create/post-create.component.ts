@@ -1,18 +1,26 @@
 import {Component, EventEmitter, Input, Output, ViewChild} from '@angular/core';
 import {Post} from "../../model/post.entity";
 import {FormsModule, NgForm} from "@angular/forms";
-import {MatFormField} from "@angular/material/form-field";
+import {MatError, MatFormField, MatLabel} from "@angular/material/form-field";
 import {MatInput} from "@angular/material/input";
 import {MatButton} from "@angular/material/button";
+import {MatDialogActions, MatDialogContent, MatDialogTitle} from "@angular/material/dialog";
+import {NgIf} from "@angular/common";
 
 @Component({
   selector: 'app-post-create',
   standalone: true,
   imports: [
-    MatButton,
+    MatLabel,
     MatInput,
+    MatFormField,
+    MatButton,
+    MatDialogActions,
     FormsModule,
-    MatFormField
+    NgIf,
+    MatDialogTitle,
+    MatDialogContent,
+    MatError
   ],
   templateUrl: './post-create.component.html',
   styleUrl: './post-create.component.css'

@@ -1,16 +1,19 @@
-
-<h2> {{ isEditMode() ? 'Edit Post': 'New Post' }}</h2>
-<div class="form-section">
-  <form #courseForm="ngForm" (submit)="onSubmit()" class="form-row">
-    <mat-form-field id="title-form-field" class="short-text-field">
-      <input [(ngModel)]="post.title" matInput name="title" placeholder="Title" required>
+<mat-dialog-content>
+  <form #PostForm="ngForm" (ngSubmit)="onSubmit()">
+    <h2 mat-dialog-title>{{ isEditMode() ? 'Edit Post' : 'Create New Post' }}</h2>
+    <mat-form-field appearance="fill">
+      <mat-label>Title</mat-label>
+      <input matInput name="title" [(ngModel)]="post.title" required>
+      <mat-error *ngIf="postForm.controls['title']?.invalid">Title is required</mat-error>
     </mat-form-field>
-    <mat-form-field id="description-form-field" class="long-text-field">
-      <input [(ngModel)]="post.content" matInput name="content" placeholder="Content" required>
+    <mat-form-field appearance="fill">
+      <mat-label>Content</mat-label>
+      <textarea matInput name="content" [(ngModel)]="post.content" required></textarea>
+      <mat-error *ngIf="postForm.controls['content']?.invalid">Content is required</mat-error>
     </mat-form-field>
-    <ng-container>
-      <button color="primary" mat-raised-button>{{ isEditMode() ? 'Update' : 'Add'}}</button>
-      <button (click)="onCancel()" color="warn" mat-raised-button>Cancel</button>
-    </ng-container>
+    <div mat-dialog-actions>
+      <button mat-button type="button" (click)="onCancel()">Cancel</button>
+      <button mat-button color="primary" type="submit">{{ isEditMode() ? 'Update' : 'Create' }}</button>
+    </div>
   </form>
-</div>
+</mat-dialog-content>
