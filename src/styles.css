@@ -1,6 +1,6 @@
 
 html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; background: antiquewhite}
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; background: #e9d9c6}
 .custom-dialog-container {
   z-index: 1000 !important;
   position: fixed !important;

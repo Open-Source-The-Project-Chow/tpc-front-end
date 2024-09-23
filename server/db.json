@@ -90,5 +90,13 @@
       "thingImage": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSjd_q0Y4-8oLhdktS2PdNp9n1RdWpSzw6wRw&s",
       "content": "Esta bufanda ha sido tejida a mano con lana de alpaca, reconocida por su suavidad y calidez. Su diseño simple y elegante la convierte en el accesorio perfecto para días fríos."
     }
+  ],
+  "materials": [
+    {
+      "id": 1,
+      "name": "Lana",
+      "quantity": 100,
+      "stand": "A1"
+    }
   ]
 }
