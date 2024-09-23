@@ -5,10 +5,10 @@ import {Material} from "../model/material.entity";
 @Injectable({
   providedIn: 'root'
 })
-export class InventoryService extends BaseService<Material> {
+export class MaterialService extends BaseService<Material>{
 
   constructor() {
     super();
-    this.resourceEndpoint = '/inventory';
+    this.resourceEndpoint = '/materials';
   }
 }
