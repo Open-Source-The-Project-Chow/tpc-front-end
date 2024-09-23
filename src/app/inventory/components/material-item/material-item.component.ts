@@ -1,6 +1,6 @@
 import {Component, Input} from '@angular/core';
 import {Material} from "../../model/material.entity";
-import {MatCard, MatCardActions, MatCardHeader, MatCardTitleGroup} from "@angular/material/card";
+import {MatCard, MatCardActions, MatCardHeader, MatCardTitle, MatCardTitleGroup} from "@angular/material/card";
 import {MatButton} from "@angular/material/button";
 
 @Component({
@@ -10,6 +10,7 @@ import {MatButton} from "@angular/material/button";
     MatCard,
     MatCardHeader,
     MatCardTitleGroup,
+    MatCardTitle,
     MatCardActions,
     MatButton
   ],
