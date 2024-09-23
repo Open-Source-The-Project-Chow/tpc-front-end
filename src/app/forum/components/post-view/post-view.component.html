@@ -1,0 +1,18 @@
+<mat-card class="post-view">
+  <button mat-button class="top-right-button" [routerLink]="['/forum']">Profile</button>
+  <div class="header-wrapper">
+    <button mat-button class="top-left-button" [routerLink]="['/forum']">Return</button>
+    <img mat-card-avatar [src]="post.image" alt="Post Image">
+    <div class="user-info">
+      <mat-card-title>{{ post.userName }}</mat-card-title>
+      <mat-card-title>{{ post.date }}</mat-card-title>
+    </div>
+  </div>
+  <mat-card-content class="content-wrapper">
+    <img mat-card-image [src]="post.thingImage" alt="Post Image" class="content-image">
+    <div class="content-text">
+      <p>{{ post.title }}</p>
+      <p>{{ post.content }}</p>
+    </div>
+  </mat-card-content>
+</mat-card>
