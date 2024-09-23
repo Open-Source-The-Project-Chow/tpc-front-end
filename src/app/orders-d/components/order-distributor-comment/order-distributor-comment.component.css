@@ -1,0 +1,50 @@
+mat-dialog-content {
+  background-color: #2b2b2b;
+  color: white;
+  border-radius: 10px;
+  position: relative;
+  transform: none;
+  opacity: 1;
+}
+
+.dialog-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.close-btn {
+  background-color: #f6724b;
+  color: white;
+  font-weight: bold;
+}
+
+.submit-btn {
+  background-color: #f6724b;
+  color: white;
+  border-radius: 20px;
+  padding: 10px 20px;
+}
+
+
+.dialog-header h3 {
+  color: white;
+}
+.form-content {
+  display: flex;
+  align-items: start;
+  gap: 20px;
+  background-color: white;
+  border-radius: 20px;
+  width: 100%;
+  min-height: 150px;
+}
+.text-area {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  resize: none;
+  width: 100%;
+  padding: 16px;
+}
