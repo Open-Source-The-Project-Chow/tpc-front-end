@@ -4,10 +4,11 @@ import {PostManagementComponent} from "./forum/pages/post-management/post-manage
 import {PostViewComponent} from "./forum/components/post-view/post-view.component";
 import {OwnProfileComponent} from "./profile/components/own-profile/own-profile.component";
 import {SusbcriptionsComponent} from "./profile/components/susbcriptions/susbcriptions.component";
+import {MaterialManagementComponent} from "./inventory/pages/material-management/material-management.component";
 
 export const routes: Routes = [
   { path: 'item', component: PageNotFoundComponent},
-  { path: 'inventory', component: PageNotFoundComponent},
+  { path: 'inventory', component: MaterialManagementComponent},
   { path: 'profile', component: OwnProfileComponent},
   { path: 'forum', component: PostManagementComponent},
   { path: 'subscriptions', component: SusbcriptionsComponent},
