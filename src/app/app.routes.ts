@@ -12,7 +12,7 @@ import {ProductListComponent} from "./Order/components/product-list/product-list
 
 
 export const routes: Routes = [
-  { path: 'item', component: OrderDistributorPageComponent},
+  { path: 'item', component: ProductListComponent},
   { path: 'item/view', component: OrderDistributorPageComponent},
   { path: 'inventory', component: MaterialManagementComponent},
   { path: 'profile', component: OwnProfileComponent},
