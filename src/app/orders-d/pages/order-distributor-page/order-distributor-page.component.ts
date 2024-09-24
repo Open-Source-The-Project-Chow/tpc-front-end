@@ -4,7 +4,7 @@ import {MatIcon} from "@angular/material/icon";
 import {NgForOf, NgIf} from "@angular/common";
 import {MatToolbar} from "@angular/material/toolbar";
 import {MatFormField} from "@angular/material/form-field";
-import {MatCardImage} from "@angular/material/card";
+import {MatCardImage, MatCardTitle} from "@angular/material/card";
 import {Post} from "../../../forum/model/post.entity";
 import {MatDialog} from "@angular/material/dialog";
 import {
@@ -22,7 +22,8 @@ import {
     NgIf,
     MatToolbar,
     MatFormField,
-    MatCardImage
+    MatCardImage,
+    MatCardTitle
   ],
   templateUrl: './order-distributor-page.component.html',
   styleUrl: './order-distributor-page.component.css'
