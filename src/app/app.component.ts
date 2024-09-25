@@ -1,12 +1,15 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
 import {RouterLink, RouterOutlet} from '@angular/router';
 import {MatToolbar} from "@angular/material/toolbar";
 import {MatAnchor} from "@angular/material/button";
+import {LanguageSwitcherComponent} from "./public/pages/language-switcher/language-switcher.component";
+import {TranslateService} from "@ngx-translate/core";
+import {FooterContentComponent} from "./public/pages/footer-content/footer-content.component";
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, MatToolbar, RouterLink, MatAnchor],
+  imports: [RouterOutlet, MatToolbar, RouterLink, MatAnchor, LanguageSwitcherComponent, FooterContentComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
@@ -18,4 +21,8 @@ export class AppComponent {
     {path: '/forum', title: 'Forum'},
     {path: '/profile', title: 'Profile'},
     ]
+  constructor(translate: TranslateService) {
+    translate.setDefaultLang('en');
+    translate.use('en');
+  }
 }
