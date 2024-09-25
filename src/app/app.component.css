@@ -1,0 +1,38 @@
+mat-toolbar {
+  background-color: #373933;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px 40px;
+  max-width: 100%;
+  position: relative;
+}
+
+mat-toolbar h1 {
+  font-size: 34px;
+  margin: 0;
+  position: absolute;
+  left: 40px;
+}
+
+.mat-spacer {
+  flex: 1 1 auto;
+}
+
+a[mat-button] {
+  color: white;
+  font-size: 20px;
+  font-weight: lighter;
+  margin-right: 30px;
+  text-decoration: none;
+}
+
+a[mat-button]:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+.logo{
+width: auto;
+  height: 80px;
+  margin-right: 20px;
+}

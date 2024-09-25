@@ -1,0 +1,31 @@
+<mat-dialog-content>
+  <div class="dialog-header">
+    <button mat-icon-button class="close-btn" (click)="onClose()">
+      <mat-icon>close</mat-icon>
+    </button>
+    <h3>New Post</h3>
+    <button mat-raised-button color="primary" class="submit-btn" (click)="onSubmit()">Post</button>
+  </div>
+  <form #PostForm="ngForm">
+    <div class="form-content">
+      <div class="upload-section">
+        <input type="file" id="fileInput" (change)="onFileSelected($event)" hidden>
+        <button mat-button class="upload-btn" type="button" (click)="triggerFileInput()">Upload Photos</button>
+      </div>
+      <div class="input-wrapper">
+        <div class="input-container">
+          <input class="custom-input" name="title" placeholder="Enter title" [(ngModel)]="post.title" required>
+          <mat-error *ngIf="PostForm.controls['title']?.invalid">The title is required</mat-error>
+        </div>
+        <div class="input-container">
+          <input class="custom-input" name="content" placeholder="Enter content" [(ngModel)]="post.content" required>
+          <mat-error *ngIf="PostForm.controls['content']?.invalid">The content is required</mat-error>
+        </div>
+      </div>
+    </div>
+    <div class="tags">
+      <button mat-button class="tag">#Request</button>
+      <button mat-button class="tag">#Sample</button>
+    </div>
+  </form>
+</mat-dialog-content>

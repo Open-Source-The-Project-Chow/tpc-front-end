@@ -1,0 +1,102 @@
+{
+  "post": [
+    {
+      "id": 1,
+      "userName": "Lucía",
+      "image": "https://statics.exitosanoticias.pe/2024/05/664286115acad.jpg",
+      "title": "Alfombra de Lana Tejida a Mano",
+      "date": "03/09/2024",
+      "thingImage": "https://images1.novica.net/pictures/4/p314333_1.jpg",
+      "content": "Esta alfombra de lana ha sido tejida a mano por artesanos de los Andes, utilizando técnicas ancestrales. Los colores naturales y los patrones geométricos reflejan la rica herencia cultural de la región. Ideal para darle calidez y autenticidad a cualquier espacio."
+    },
+    {
+      "id": 2,
+      "userName": "José",
+      "image": "https://fotos.perfil.com/2020/08/15/trim/987/555/20200814christophekrywonisgzaprensakuarzotelefecedocg-1002333.jpg",
+      "title": "Vasija de Barro Decorada",
+      "date": "03/09/2024",
+      "thingImage": "https://manualidadestorozos.wordpress.com/wp-content/uploads/2014/04/vasijaarcilla2.jpg",
+      "content": "Esta vasija de barro ha sido moldeada a mano y decorada con motivos tradicionales de la cultura precolombina. Es perfecta como pieza decorativa o para almacenar objetos pequeños, destacando la habilidad y el cuidado del artesano."
+    },
+    {
+      "id": 3,
+      "userName": "Carmen",
+      "image": "https://live.staticflickr.com/3899/14701255744_7e18871397_b.jpg",
+      "title": "Sombrero de Paja Toquilla",
+      "date": "04/09/2024",
+      "thingImage": "https://lacasadelsombrero.pe/wp-content/uploads/2018/11/IMG-20181128-WA0014.jpg",
+      "content": "El sombrero de paja toquilla es un ícono del arte ecuatoriano, tejido a mano con finas fibras de la palma de toquilla. Es ligero y transpirable, ideal para protegerse del sol con estilo. Cada sombrero es una obra maestra que puede tomar días en completarse."
+    },
+    {
+      "id": 4,
+      "userName": "Ana",
+      "image": "https://imgs.search.brave.com/kaYE9v_SVRnEEpoWYys6yzCPUqlITIUCL10k49TAdEo/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9zMjAz/LmVyb21lLmNvbS84/NzQvUm9KdTQ4UTkv/aHhHd3ozTnouanBl/Zz92PTE3MTkwMzQ3/NDQ",
+      "title": "Tapiz de Algodón Orgánico",
+      "date": "04/09/2024",
+      "thingImage": "https://nativaliving.mx/cdn/shop/files/7_49401f83-8ca5-434e-a5a6-42290c5381d5.png?v=1687282017",
+      "content": "Este tapiz ha sido confeccionado a mano con algodón orgánico. Los colores naturales y los diseños inspirados en la naturaleza lo hacen perfecto para decorar interiores de forma ecológica y artística."
+    },
+    {
+      "id": 5,
+      "userName": "Mario",
+      "image": "https://cdn-3.expansion.mx/dims4/default/53ca564/2147483647/strip/true/crop/931x652+0+0/resize/1200x840!/quality/90/?url=https%3A%2F%2Fcdn-3.expansion.mx%2F73%2Fac%2F92a94ba04352a5d6d6fc1e03a9b2%2Fmario.JPG",
+      "title": "Collar de Plata y Piedras Semipreciosas",
+      "date": "05/09/2024",
+      "thingImage": "https://d15yqn4xt8exgp.cloudfront.net/media/products/COL000002/inka-products-collier-argent-sipan-argent-950eme-incruste-pierres-semi-precieuses-1-20190922215317.jpg",
+      "content": "Este collar artesanal está hecho con plata y decorado con piedras semipreciosas cuidadosamente seleccionadas. Cada pieza es única, destacando el brillo de las piedras y el detallado trabajo de los orfebres locales."
+    },
+    {
+      "id": 6,
+      "userName": "Sofía",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSMK5IoDqmqAQandV44bUWqoYwSYk4qBtCb5g&s",
+      "title": "Bolso Bordado con Motivos Florales",
+      "date": "05/09/2024",
+      "thingImage": "https://i.pinimg.com/736x/01/41/01/01410124861e0bb2891fd1bfe359aebd.jpg",
+      "content": "Este bolso ha sido bordado a mano con hilos de colores vivos, representando motivos florales. Ideal para quienes buscan un accesorio único y con un toque de elegancia artesanal, además de ser funcional y resistente."
+    },
+    {
+      "id": 7,
+      "userName": "David",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/David_Beckham_UNICEF_%28cropped%29.jpg/640px-David_Beckham_UNICEF_%28cropped%29.jpg",
+      "title": "Cojines Tejidos en Telar",
+      "date": "06/09/2024",
+      "thingImage": "https://i.pinimg.com/736x/78/26/e0/7826e05e2ef56d5e5d4982497ca18841.jpg",
+      "content": "Estos cojines han sido tejidos en telar con lana de alpaca, ofreciendo una textura suave y cálida. Sus diseños geométricos y colores vivos los convierten en una excelente opción para decorar sofás y camas."
+    },
+    {
+      "id": 8,
+      "userName": "Martina",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/9/96/Martina_Cariddi.jpg",
+      "title": "Escultura de Madera Tallada a Mano",
+      "date": "06/09/2024",
+      "thingImage": "https://images1.novica.net/pictures/10/p113927_2.jpg",
+      "content": "Esta escultura de madera ha sido tallada a mano con un detalle impresionante. Los artesanos han capturado la esencia de la naturaleza y la vida silvestre en cada curva y detalle. Una pieza de arte ideal para cualquier hogar o colección."
+    },
+    {
+      "id": 9,
+      "userName": "Andrés",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/2/2a/Andr%C3%A9sHurtado.png",
+      "title": "Jarrón de Vidrio Soplado",
+      "date": "07/09/2024",
+      "thingImage": "https://http2.mlstatic.com/D_NQ_NP_937501-MPE75558905706_042024-O.webp",
+      "content": "Este jarrón ha sido creado utilizando la técnica de vidrio soplado, con un diseño moderno y fluido que atrapa la luz de forma encantadora. Cada jarrón es único debido a la técnica artesanal empleada."
+    },
+    {
+      "id": 10,
+      "userName": "Laura",
+      "image": "https://phantom-marca-mx.unidadeditorial.es/1104cfb0f3dc59320a02c97790f8dade/resize/828/f/jpg/mx/assets/multimedia/imagenes/2023/06/10/16864305882376.jpg",
+      "title": "Bufanda de Alpaca Tejida a Mano",
+      "date": "07/09/2024",
+      "thingImage": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSjd_q0Y4-8oLhdktS2PdNp9n1RdWpSzw6wRw&s",
+      "content": "Esta bufanda ha sido tejida a mano con lana de alpaca, reconocida por su suavidad y calidez. Su diseño simple y elegante la convierte en el accesorio perfecto para días fríos."
+    }
+  ],
+  "materials": [
+    {
+      "id": 1,
+      "name": "Lana",
+      "quantity": 100,
+      "stand": "A1"
+    }
+  ]
+}

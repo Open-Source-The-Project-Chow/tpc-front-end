@@ -1,0 +1,29 @@
+<div class="container">
+  <div class="left-panel">
+    <button mat-button class="new-post-button" (click)="openCreatePostDialog()">New Post</button>
+    <div class="search-filters">
+      <div class="filter-section">
+        <span>Search by Filters</span>
+        <span>Date of Posting</span>
+        <button mat-icon-button>
+          <mat-icon>arrow_upward</mat-icon>
+        </button>
+        <button mat-icon-button>
+          <mat-icon>arrow_downward</mat-icon>
+        </button>
+      </div>
+      <div class="filter-section">
+        <span>Tags</span>
+        <button mat-button class="filters-button">#Request</button>
+        <button mat-button class="filters-button">#Sample</button>
+      </div>
+    </div>
+  </div>
+  <div class="right-panel">
+    <div class="items">
+      <ng-container *ngIf="dataSource">
+        <app-post-item *ngFor="let post of dataSource.data" [post]="post" ></app-post-item>
+      </ng-container>
+    </div>
+  </div>
+</div>
