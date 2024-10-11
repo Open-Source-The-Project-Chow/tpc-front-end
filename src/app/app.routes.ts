@@ -7,8 +7,8 @@ import {PostViewComponent} from "./forum/components/post-view/post-view.componen
 import {OwnProfileComponent} from "./profile/components/own-profile/own-profile.component";
 import {SusbcriptionsComponent} from "./profile/components/susbcriptions/susbcriptions.component";
 import {MaterialManagementComponent} from "./inventory/pages/material-management/material-management.component";
-import {OrderDistributorPageComponent} from "./orders-d/pages/order-distributor-page/order-distributor-page.component";
-import {ProductListComponent} from "./Order/components/product-list/product-list.component";
+import {OrderDistributorPageComponent} from "./orders/pages/order-distributor-page/order-distributor-page.component";
+import {ProductListComponent} from "./orders/components/product-list/product-list.component";
 
 
 export const routes: Routes = [
