@@ -42,6 +42,12 @@ export class BaseService<T> {
       .pipe(retry(2),catchError(this.handleError));
   }
 
+  public partialUpdate(id: any, item: any): Observable<T> {
+    return this.http.patch<T>(`${this.resourcePath()}/${id}`, JSON.stringify(item),
+      this.httpOptions)
+      .pipe(retry(2),catchError(this.handleError));
+  }
+
   public getAll(): Observable<T[]> {
     return this.http.get<T[]>(this.resourcePath(), this.httpOptions)
       .pipe(retry(2),catchError(this.handleError));
