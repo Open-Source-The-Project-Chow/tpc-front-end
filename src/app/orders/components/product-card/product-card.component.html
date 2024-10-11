@@ -1,0 +1,18 @@
+<div class="card-container">
+  <div class="card">
+    <div class="card-image">
+      <img [src]="order.image" alt="Imagen de la tarjeta">
+    </div>
+    <div class="card-content">
+      <h2 class="card-title">{{ order.title }}</h2>
+      <p class="card-description">{{ order.comment }}</p>
+      <div class="card-tags">
+        <span class="tag">Etiqueta 1</span>
+        <span class="tag">Etiqueta 2</span>
+        <span class="tag">Etiqueta 3</span>
+      </div>
+      <button class="card-button"[routerLink]="['/craftsman/orders/product-info', order.id]">Leer más</button>
+    </div>
+  </div>
+</div>
+
