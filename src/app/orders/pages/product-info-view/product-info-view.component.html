@@ -1,0 +1,32 @@
+<div class="container">
+  <div class="panel">
+    <div class="panel-heading">
+      <div class="left-side">
+        <button mat-button class="back-button" [routerLink]="['/craftsman/orders/']">Volver</button>
+        <div class="titulo">{{ order.title }}</div>
+      </div>
+      <div class="right-side">
+        <button mat-button class="aceptar-button">Aceptar</button>
+        <button mat-button class="progress-button">En progreso</button>
+      </div>
+    </div>
+    <div class="panel-body">
+      <span>Fotos</span>
+      <div class ="images-container">
+        <img mat-card-image src="https://i.etsystatic.com/27048850/r/il/d3d602/2874601912/il_570xN.2874601912_q1rn.jpg" alt="Post Image" class="content-images">
+        <img mat-card-image src="https://i.ebayimg.com/thumbs/images/g/iAYAAOSwl6JmxjTP/s-l1200.jpg" alt="Post Image" class="content-images">
+        <img mat-card-image src="https://images1.novica.net/pictures/46/p455068_1.jpg" alt="Post Image" class="content-images">
+        <img mat-card-image src="https://dcdn.mitiendanube.com/stores/002/000/756/products/aros-41-5435bf11f4cfd8958f16716563582483-240-0.jpg" alt="Post Image" class="content-images">
+      </div>
+      <div class="time-info">
+        <span>10/10 </span>
+        <span>{{ order.deadline }}</span>
+      </div>
+      <span>Comentario para el artesano {{ order.craftsman }}:</span>
+    </div>
+    <mat-form-field >
+      <textarea matInput class = "text-area" [(ngModel)]="editableComment"></textarea>
+    </mat-form-field>
+    <button (click)="actualizarComentario()">Guardar Comentario</button>
+  </div>
+</div>
