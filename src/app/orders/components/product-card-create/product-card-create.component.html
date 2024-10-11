@@ -1,0 +1,22 @@
+<mat-dialog-content>
+  <div class="dialog-header">
+    <button mat-icon-button class="close-btn" (click)="onClose()">
+      <mat-icon>close</mat-icon>
+    </button>
+    <h3>New Post</h3>
+  </div>
+  <form #orderForm="ngForm" (submit)="onSubmit()">
+    <div class="form-content">
+      <div class="input-wrapper">
+        <div class="input-container">
+          <mat-form-field id="title-form-field" class="short-text-field">
+            <input [(ngModel)]="order.title" matInput name="title" placeholder="Title" required>
+          </mat-form-field>
+        </div>
+      </div>
+    </div>
+    <div class="tags">
+      <button mat-raised-button class="tag" type="submit">Aceptar</button>
+    </div>
+  </form>
+</mat-dialog-content>
