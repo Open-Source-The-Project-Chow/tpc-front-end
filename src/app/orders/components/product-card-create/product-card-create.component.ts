@@ -10,7 +10,7 @@ import {Order} from "../../model/order.entity";
 import {MatInput} from "@angular/material/input";
 
 @Component({
-  selector: 'app-produc-card-create',
+  selector: 'app-product-card-create',
   standalone: true,
   imports: [
     FormsModule,

@@ -7,7 +7,7 @@ import {ProductCardComponent} from "../../components/product-card/product-card.c
 import {MatDialog, MatDialogActions} from '@angular/material/dialog';
 import {OrderService} from "../../services/order.service";
 
-import {ProductCardCreateComponent} from "../../components/produc-card-create/product-card-create.component";
+import {ProductCardCreateComponent} from "../../components/product-card-create/product-card-create.component";
 import {MatButton} from "@angular/material/button";
 
 
