@@ -1,0 +1,17 @@
+<mat-dialog-content>
+  <div class="dialog-header">
+    <button mat-icon-button class="close-btn" (click)="onClose()">
+      <mat-icon>X</mat-icon>
+    </button>
+    <h3>Comment</h3>
+    <button mat-raised-button color="primary" class="submit-btn" (click)="onSubmit()">Add</button>
+  </div>
+  <form #CommentForm="ngForm">
+    <div class="form-content">
+      <textarea matInput class="text-area"></textarea>
+      <mat-error *ngIf="CommentForm.controls['content']?.invalid">The content is required</mat-error>
+    </div>
+  </form>
+</mat-dialog-content>
+
+

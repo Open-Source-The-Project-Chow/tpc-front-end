@@ -1,0 +1,60 @@
+.planes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 100px;
+  background-color: #E9D9C6;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.plan {
+  flex: 0 1 30%;
+  border-radius: 30px;
+  padding: 20px;
+  margin: 0 5px;
+  background-color: #ffffff;
+  box-shadow: 0px 10px 20px -10px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+.plan:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 15px 30px -10px rgba(0, 0, 0, 0.2);
+}
+
+.plan h3 {
+  color: #000000;
+  margin-bottom: 20px;
+  font: 500 2em "Lato", sans-serif;
+  letter-spacing: 1px;
+}
+
+.plan h2 {
+  color: #000000;
+  margin-bottom: 20px;
+  font: 500 3em "Lato", sans-serif;
+  letter-spacing: 1px;
+}
+
+.plan p {
+  color: #000000;
+  margin-bottom: 30px;
+  line-height: 1.6;
+  font: 500 1.2em "Lato", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: left;
+  padding: 10px 30px;
+}
+
+.plan button {
+  padding: 15px 25px;
+  color: #ffffff;
+  background: #D65A31;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  transition: background 0.3s ease;
+}

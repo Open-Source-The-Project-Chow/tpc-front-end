@@ -1,0 +1,113 @@
+.container {
+  display: flex;
+  padding: 40px;
+  justify-content: center;
+}
+
+.panel {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 24px;
+  background-color: white;
+  width: fit-content;
+}
+
+.back-button,
+.aceptar-button,
+.progress-button {
+  display: inline-block;
+  width: 136px;
+  height: 45px;
+  border-radius: 20px;
+  font-size: 18px;
+}
+.comment-button {
+  display: inline-block;
+  width: 180px;
+  height: 45px;
+  border-radius: 20px;
+  background-color: #d65a31; /* Para los dos primeros botones */
+  font-size: 18px;
+}
+
+.progress-button {
+  background-color: yellowgreen; /* Diferente color para este botón */
+}
+
+.panel-heading {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.panel-body {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.panel-body span {
+  font-size: 32px;
+  letter-spacing: -0.8px;
+  line-height: 40px;
+}
+
+
+.content-images {
+  width: 170px;
+  height: auto;
+  margin-right: 25px;
+}
+
+.images-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 24px;
+}
+
+.panel-comment {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: center;
+  background-color:red;
+}
+.text-area {
+}
+mat-form-field{
+  width: 100%;
+  height: fit-content;
+}
+
+.title {
+  background-color: #373933;
+  height: fit-content;
+}
+.left-side{
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+  width: fit-content;
+}
+.right-side{
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+  width: fit-content;
+}
+.titulo{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: fit-content;
+  font-size: 32px;
+}
+.time-info{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 72px;
+}
