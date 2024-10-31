@@ -1,0 +1,72 @@
+<div class="container">
+  <div class="panel">
+    <div class="panel-heading">
+      <div class="left-side">
+        <button mat-button class="back-button" [routerLink]="['/craftsman/orders/']">Volver</button>
+      </div>
+
+      <div class="right-side">
+        <!-- Botón de Edit/Aceptar -->
+        <button mat-button
+                class="progress-button"
+                [ngClass]="{'red-button': isEditMode}"
+                (click)="handleToggleClick()">
+          {{ isEditMode ? 'Aceptar' : 'Edit' }}
+        </button>
+
+        <!-- Botón de estado: Visible en ambos modos, pero solo interactivo en modo edición -->
+        <button mat-button
+                [matMenuTriggerFor]="menu"
+                [disabled]="!isEditMode"
+                class="orange-button">
+          {{ selectedStatus }}
+        </button>
+
+        <!-- Menú desplegable con opciones (solo disponible en modo de edición) -->
+        <mat-menu #menu="matMenu">
+          <button mat-menu-item (click)="selectStatus('En progreso')">En progreso</button>
+          <button mat-menu-item (click)="selectStatus('Pending')">Pending</button>
+          <button mat-menu-item (click)="selectStatus('Done')">Done</button>
+        </mat-menu>
+      </div>
+    </div>
+
+    <div class="panel-body">
+      <div class="title-input-container" *ngIf="isEditMode">
+        <input
+          [(ngModel)]="editableTitle"
+          name="title"
+          placeholder="Title"
+          required
+          class="title-input">
+      </div>
+
+      <span *ngIf="!isEditMode" class="view-mode-text">{{ editableTitle }}</span>
+      <span>Fotos</span>
+      <div class="images-container">
+        <img mat-card-image src="https://i.etsystatic.com/27048850/r/il/d3d602/2874601912/il_570xN.2874601912_q1rn.jpg" alt="Post Image" class="content-images">
+        <img mat-card-image src="https://i.ebayimg.com/thumbs/images/g/iAYAAOSwl6JmxjTP/s-l1200.jpg" alt="Post Image" class="content-images">
+        <img mat-card-image src="https://images1.novica.net/pictures/46/p455068_1.jpg" alt="Post Image" class="content-images">
+        <img mat-card-image src="https://dcdn.mitiendanube.com/stores/002/000/756/products/aros-41-5435bf11f4cfd8958f16716563582483-240-0.jpg" alt="Post Image" class="content-images">
+      </div>
+
+      <div class="time-info">
+        <span>Items: 10/10</span>
+        <span>Deadline: {{ order.deadline }}</span>
+      </div>
+
+      <span>Comentario :</span>
+
+      <div class="comment-box">
+        <textarea
+          class="text-area"
+          [(ngModel)]="editableComment"
+          *ngIf="isEditMode">
+        </textarea>
+
+        <!-- Solo visualización cuando no está en modo edición -->
+        <span *ngIf="!isEditMode" class="view-mode-text">{{ editableComment }}</span>
+      </div>
+    </div>
+  </div>
+</div>

@@ -2,14 +2,15 @@ import {Component} from '@angular/core';
 import {RouterLink, RouterOutlet} from '@angular/router';
 import {MatToolbar} from "@angular/material/toolbar";
 import {MatAnchor} from "@angular/material/button";
-import {LanguageSwitcherComponent} from "./public/pages/language-switcher/language-switcher.component";
+import {LanguageSwitcherComponent} from "./public/components/language-switcher/language-switcher.component";
 import {TranslateService} from "@ngx-translate/core";
-import {FooterContentComponent} from "./public/pages/footer-content/footer-content.component";
+import {FooterContentComponent} from "./public/components/footer-content/footer-content.component";
+import {ToolbarComponent} from "./public/components/toolbar/toolbar.component";
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, MatToolbar, RouterLink, MatAnchor, LanguageSwitcherComponent, FooterContentComponent],
+  imports: [RouterOutlet, MatToolbar, RouterLink, MatAnchor, LanguageSwitcherComponent, FooterContentComponent, ToolbarComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
