@@ -16,7 +16,7 @@ export class OrderService extends BaseService<Order>{
     return this.getById(id);
   }
   //ajustate de base service
-  updateCommentOrder(order: Order): Observable<Order> {
+  partialUpdateOrder(order: Order): Observable<Order> {
     return this.partialUpdate(order.id, order);  // Aquí usamos PUT
   }
 
