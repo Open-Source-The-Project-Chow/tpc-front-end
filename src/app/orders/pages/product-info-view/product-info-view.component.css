@@ -1,7 +1,7 @@
 .container {
   display: flex;
-  padding: 40px;
   justify-content: center;
+  padding: 40px;
 }
 
 .panel {
@@ -10,35 +10,14 @@
   gap: 16px;
   padding: 24px;
   background-color: white;
+  border-radius: 16px;
   width: fit-content;
-}
-
-.back-button,
-.aceptar-button,
-.progress-button {
-  display: inline-block;
-  width: 136px;
-  height: 45px;
-  border-radius: 20px;
-  font-size: 18px;
-}
-.comment-button {
-  display: inline-block;
-  width: 180px;
-  height: 45px;
-  border-radius: 20px;
-  background-color: #d65a31; /* Para los dos primeros botones */
-  font-size: 18px;
-}
-
-.progress-button {
-  background-color: yellowgreen; /* Diferente color para este botón */
 }
 
 .panel-heading {
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
+
 }
 
 .panel-body {
@@ -49,65 +28,144 @@
 
 .panel-body span {
   font-size: 32px;
-  letter-spacing: -0.8px;
   line-height: 40px;
+  letter-spacing: -0.8px;
 }
 
 
-.content-images {
-  width: 170px;
-  height: auto;
-  margin-right: 25px;
+
+.back-button {
+  background-color: red;
+  color: white;
+}
+
+.progress-button {
+  background-color: yellowgreen;
+  color: white;
+}
+
+.save-button {
+  background-color: #3f51b5;
+  color: white;
+}
+
+.comment-button {
+  display: inline-block;
+  width: 180px;
+  height: 45px;
+  border-radius: 20px;
+  background-color: #d65a31;
+  font-size: 18px;
 }
 
 .images-container {
   display: flex;
   flex-wrap: wrap;
-  align-items: flex-start;
+  align-items: center;
   justify-content: center;
-  gap: 24px;
+  gap: 16px;
+}
+
+.content-images {
+  width: 170px;
+  border-radius: 15px;
+  height: auto;
 }
 
 .panel-comment {
   display: flex;
   flex-direction: column;
-  gap: 16px;
   align-items: center;
-  background-color:red;
+  gap: 16px;
 }
+
 .text-area {
-}
-mat-form-field{
   width: 100%;
-  height: fit-content;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  resize: none;
+  height: 120px; /* Un poco más alto para mejor visibilidad */
+  font-size: 16px;
+  line-height: 1.5;
+  background-color: #fff; /* Fondo blanco */
+  box-sizing: border-box;
+}
+
+.comment-box {
+  width: 100%;
+  background-color: #f0f0f0;
+  padding: 16px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  box-sizing: border-box; /* Asegura que el padding esté incluido en el ancho total */
 }
 
 .title {
   background-color: #373933;
   height: fit-content;
 }
-.left-side{
+.editableTitle {
+  font-size: 48px;
+}
+
+.left-side, .right-side {
   display: flex;
-  flex-direction: row;
   gap: 16px;
   width: fit-content;
 }
-.right-side{
+
+.titulo {
   display: flex;
-  flex-direction: row;
-  gap: 16px;
-  width: fit-content;
-}
-.titulo{
-  display: flex;
-  flex-direction: row;
   align-items: center;
-  width: fit-content;
   font-size: 32px;
+  width: fit-content;
 }
-.time-info{
+
+.time-info {
   display: flex;
-  flex-direction: row;
   align-items: center;
   gap: 72px;
+}
+.red-button {
+  background-color: red;
+  color: white;
+}
+.orange-button {
+  background-color: orange; /* Color de fondo */
+  color: white; /* Color del texto */
+  border: none; /* Sin borde */
+  cursor: pointer; /* Cursor de puntero */
+}
+
+/* Estilo para el botón deshabilitado */
+.orange-button:disabled {
+  background-color: orange; /* Mantiene el mismo color de fondo */
+  color: white; /* Mantiene el mismo color del texto */
+  cursor: not-allowed; /* Cambia el cursor para indicar que no se puede hacer clic */
+}
+
+/* Estilo del botón en modo hover */
+.orange-button:hover:not(:disabled) {
+  background-color: darkorange; /* Color de fondo más oscuro al pasar el mouse */
+}
+.title-input-container {
+  display: flex;
+  align-items: center; /* Alinear verticalmente */
+  margin-bottom: 16px; /* Espacio inferior para separación */
+}
+
+.title-input, .view-mode-text {
+  font-size: 48px; /* Tamaño de fuente igual para ambos */
+  line-height: 1.2; /* Espaciado entre líneas */
+  color: #000; /* Color del texto */
+  margin-bottom: 16px; /* Espacio inferior para separación */
+  /* Asegúrate de que los otros estilos no interfieran */
+}
+
+.common-title {
+  font-size: 48px;
+  line-height: 1.2;
+  color: #000;
+  margin-bottom: 16px;
 }
