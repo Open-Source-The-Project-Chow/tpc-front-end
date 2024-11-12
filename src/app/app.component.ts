@@ -16,7 +16,7 @@ import {FooterContentComponent} from "./public/components/footer-content/footer-
 export class AppComponent {
   title = 'tpc-front-end';
   protected options = [
-    {path: '/item', title: 'Items'},
+    {path: '/login', title: 'Items'},
     {path: '/inventory', title: 'Inventory'},
     {path: '/forum', title: 'Forum'},
     {path: '/profile', title: 'Profile'},
