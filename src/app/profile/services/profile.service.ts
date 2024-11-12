@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import {BaseService} from "../../shared/services/base.service";
 import {Profile} from "../model/profile.entity";
-import {Observable} from "rxjs";
+import {catchError, Observable, retry} from "rxjs";
 
 @Injectable({
   providedIn: 'root'
@@ -10,13 +10,13 @@ export class ProfileService extends BaseService<Profile> {
 
   constructor() {
     super();
-    this.resourceEndpoint = '/profiles';
+    this.resourceEndpoint = '/profile';
   }
-  getProfileById(id: string): Observable<Profile> {
+  getProfileById(id: string): Observable<any> {
     return this.getById(id);
   }
-  getProfileByUsername(username: string): Observable<Profile> {
+  getProfileByUsername(username: string): Observable<any> {
     return this.http.get<Profile>(`${this.resourcePath()}/username/${username}`, this.httpOptions)
-      .pipe();
+      .pipe(retry(2), catchError(this.handleError));
   }
 }

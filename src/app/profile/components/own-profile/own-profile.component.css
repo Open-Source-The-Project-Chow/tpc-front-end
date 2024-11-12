@@ -34,31 +34,36 @@
 .header-wrapper{
   display: flex;
   flex-wrap: wrap;
-  align-items: flex-start;
+  align-items: center;
   justify-content: center;
-  gap: 50%;
+  gap: 5%;
   position: relative;
   width: 100%;
   box-sizing: border-box;
   height: 100%;
 }
 
+.content-image{
+  max-width: 500px;
+  max-height: 500px;
+}
+
 .content-text-1{
   column-count: 2;
-  gap: 10px;
+  gap: 2px;
   width: 100%;
   box-sizing: border-box;
 }
 .content-text-2{
-  column-count: 3;
-  gap: 10px;
+  column-count: 5;
+  gap: 1%;
   width: 100%;
   box-sizing: border-box;
   height: 100%;
 }
 .content-text-3{
   column-count: 5;
-  gap: 10px;
+  gap: 5px;
   width: 100%;
   box-sizing: border-box;
   height: 100%;
