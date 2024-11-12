@@ -47,5 +47,4 @@ export class ProductCardCreateComponent {
       console.error('Invalid form data');
     }
   }
-
 }
