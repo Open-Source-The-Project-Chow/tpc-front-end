@@ -7,7 +7,7 @@ import {Observable} from "rxjs";
 export class PostService extends BaseService<Post>{
   constructor() {
     super();
-    this.resourceEndpoint = '/post';
+    this.resourceEndpoint = '/posts';
   }
   getPostById(id: string): Observable<Post> {
     return this.getById(id);
