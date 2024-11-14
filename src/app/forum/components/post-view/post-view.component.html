@@ -4,15 +4,24 @@
     <button mat-button class="top-left-button" [routerLink]="['/forum']">Return</button>
     <img mat-card-avatar [src]="post.image" alt="Post Image">
     <div class="user-info">
-      <mat-card-title>{{ post.userName }}</mat-card-title>
-      <mat-card-title>{{ post.date }}</mat-card-title>
+      <mat-card-title>{{ post.title }}</mat-card-title>
+      <mat-card-title>{{ post.title }}</mat-card-title>
     </div>
   </div>
   <mat-card-content class="content-wrapper">
-    <img mat-card-image [src]="post.thingImage" alt="Post Image" class="content-image">
+    <img mat-card-image [src]="post.image" alt="Post Image" class="content-image">
     <div class="content-text">
       <p>{{ post.title }}</p>
       <p>{{ post.content }}</p>
+    </div>
+  </mat-card-content>
+</mat-card>
+
+<mat-card class="comments-card">
+  <mat-card-title>Comments</mat-card-title>
+  <mat-card-content>
+    <div *ngFor="let comment of comments" class="comment">
+      <p><strong>{{ comment.author }}</strong>: {{ comment.content }}</p>
     </div>
   </mat-card-content>
 </mat-card>
