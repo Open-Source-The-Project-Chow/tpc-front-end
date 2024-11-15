@@ -9,6 +9,7 @@ export class PostService extends BaseService<Post>{
     super();
     this.resourceEndpoint = '/posts';
   }
+  //hola jorgito
   getPostById(id: string): Observable<Post> {
     return this.getById(id);
   }
