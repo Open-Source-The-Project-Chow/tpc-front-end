@@ -17,7 +17,7 @@ export const routes: Routes = [
   { path: 'craftsman/orders/product-info/:id', component: ProductInfoViewComponent},
   { path: 'inventory', component: MaterialManagementComponent},
   { path: 'forum', component: PostManagementComponent},
-  { path: 'forum/post-view/:id', component: PostViewComponent},
+  { path: 'forum/post-view/:id', component: PostViewComponent },
   { path: 'profile', component: OwnProfileComponent},
   { path: 'subscriptions', component: SubscriptionsComponent },
   { path: '',                 redirectTo: 'login', pathMatch: 'full'},
