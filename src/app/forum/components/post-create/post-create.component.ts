@@ -8,6 +8,7 @@ import {MatDialogActions, MatDialogContent, MatDialogRef, MatDialogTitle} from "
 import {NgIf} from "@angular/common";
 import {MatCard, MatCardActions, MatCardContent} from "@angular/material/card";
 import {MatIcon} from "@angular/material/icon";
+import {PostService} from '../../services/post.service';
 
 @Component({
   selector: 'app-post-create',
@@ -40,7 +41,7 @@ export class PostCreateComponent {
   @Output() protected cancelRequested = new EventEmitter<void>();
   @ViewChild('PostForm', {static: false}) protected postForm!: NgForm;
 
-  constructor(private dialogRef: MatDialogRef<PostCreateComponent>) {
+  constructor(private dialogRef: MatDialogRef<PostCreateComponent>, private postService: PostService) {
     this.post = new Post({});
   }
 
@@ -55,13 +56,25 @@ export class PostCreateComponent {
 
   protected onSubmit() {
     if (this.isValid()) {
-      let emitter = this.isEditMode()? this.postUpdateRequested : this.postAddRequested;
-      emitter.emit(this.post);
-      this.resetEditState();
+      if (this.isEditMode()) {
+        this.postUpdateRequested.emit(this.post);
+      } else {
+        this.postService.createPost(this.post).subscribe(
+          response => {
+            console.log('Post created successfully', response);
+            this.postAddRequested.emit(response);
+            this.resetEditState();
+          },
+          error => {
+            console.error('Error creating post', error);
+          }
+        );
+      }
     } else {
       console.error('Invalid form data');
     }
   }
+
   protected onClose() {
     this.dialogRef.close();
   }
