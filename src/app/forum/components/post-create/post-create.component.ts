@@ -31,7 +31,7 @@ import {PostService} from '../../services/post.service';
     MatIconButton
   ],
   templateUrl: './post-create.component.html',
-  styleUrl: './post-create.component.css'
+  styleUrls: ['./post-create.component.css']
 })
 export class PostCreateComponent {
   @Input() post!: Post;
@@ -59,6 +59,9 @@ export class PostCreateComponent {
       if (this.isEditMode()) {
         this.postUpdateRequested.emit(this.post);
       } else {
+        // Hardcode the image URL
+        this.post.image = 'https://tienda.figurasperuanas.com/wp/wp-content/uploads/2023/01/Captura-de-pantalla-2023-04-17-a-las-16.51.40.png';
+
         this.postService.createPost(this.post).subscribe(
           response => {
             console.log('Post created successfully', response);
@@ -67,6 +70,7 @@ export class PostCreateComponent {
           },
           error => {
             console.error('Error creating post', error);
+            alert(error); // Display the error message to the user
           }
         );
       }
@@ -88,7 +92,11 @@ export class PostCreateComponent {
     const input = event.target as HTMLInputElement;
     if (input.files && input.files.length > 0) {
       const file = input.files[0];
-      console.log('Archivo seleccionado:', file);
+      const reader = new FileReader();
+      reader.onload = (e: any) => {
+        this.post.image = e.target.result;
+      };
+      reader.readAsDataURL(file);
     }
   }
 }
