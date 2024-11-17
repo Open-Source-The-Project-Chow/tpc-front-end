@@ -98,5 +98,24 @@
       "quantity": 100,
       "stand": "A1"
     }
+  ],
+  "profiles": [
+    {
+      "id": 1,
+      "firstName": "Lucía",
+      "lastName": "García",
+      "email": "correo@dominio.com",
+      "phone": "123456789",
+      "image": "https://statics.exitosanoticias.pe/2024/05/664286115acad.jpg",
+      "createdAt": "2024-09-03T00:00:00.000Z",
+      "updatedAt": "2024-09-03T00:00:00.000Z"
+    }
+  ],
+  "orders":[
+    {
+      "id": 1,
+      "craftsmanName": "Lucía",
+      "thingImage": "https://images1.novica.net/pictures/4"
+    }
   ]
 }

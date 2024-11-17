@@ -1,0 +1,8 @@
+<div class="container" >
+    <button mat-button class="button-list" [routerLink]="['/craftsman/orders']">Volver</button>
+  <div class="items-section">
+    <ng-container *ngIf="dataSource">
+      <app-profile-card *ngFor="let profile of dataSource.data" [profile]="profile" ></app-profile-card>
+    </ng-container>
+  </div>
+</div>

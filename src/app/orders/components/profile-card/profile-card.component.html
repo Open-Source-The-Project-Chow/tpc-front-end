@@ -1,0 +1,14 @@
+<div class="card">
+  <div class="card-image">
+    <img [src]="profile.image" alt="Imagen de la tarjeta">
+  </div>
+  <div class="card-content">
+    <h3>{{ profile.firstName }}</h3>
+    <div class="card-text-container">
+      <div class="card-text">Work Request Status: NONE</div>
+      <div class="card-text">Since:{{ profile.updatedAt }}</div>
+    </div>
+    <button class="card-button" [routerLink]="['/distributor-list/view', profile.id]">Check Out</button>
+  </div>
+</div>
+

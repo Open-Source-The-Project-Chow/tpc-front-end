@@ -10,13 +10,13 @@ export class ProfileService extends BaseService<Profile> {
 
   constructor() {
     super();
-    this.resourceEndpoint = '/profile';
+    this.resourceEndpoint = '/profiles';
   }
-  getProfileById(id: string): Observable<any> {
+  getProfileById(id: string): Observable<Profile> {
     return this.getById(id);
   }
   getProfileByUsername(username: string): Observable<any> {
-    return this.http.get<Profile>(`${this.resourcePath()}/username/${username}`, this.httpOptions)
+    return this.http.get<Profile>(`${this.resourcePath()}?firstName=${username}`, this.httpOptions)
       .pipe(retry(2), catchError(this.handleError));
   }
 }

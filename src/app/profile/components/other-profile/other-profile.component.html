@@ -1,0 +1,36 @@
+<mat-card class="article-card">
+  <div class="header-wrapper">
+    <img mat-card-image [src]="profile.image" alt="Post Image" class="content-image">
+    <div class="content-text">
+      <div class="content-text-1">
+        <p><strong>Username: </strong></p><p>{{profile.firstName}}</p></div>
+      <div class="content-text-1">
+        <p><strong>Names: </strong></p><p>{{ profile.firstName }}</p></div>
+      <div class="content-text-1">
+        <p><strong>Surnames: </strong></p><p>{{ profile.lastName }}</p></div>
+      <div class="content-text-1">
+        <p><strong>E-mail: </strong></p><p>{{ profile.email}}</p></div>
+      <div class="content-text-1">
+        <p><strong>ID: </strong></p><p>{{ profile.phone }}</p></div>
+    </div>
+  </div>
+  <div class="second-wrapper">
+    <div class="row-1">
+      <div class="content-text-2">
+        <p><strong>Items ordered: </strong></p><p>{{items}}</p>
+        <p><strong>Subscription status: </strong></p>
+      </div>
+    </div>
+    <div class="row-2">
+      <div class="content-text-3">
+        <p><strong>Registration Date: </strong></p><p>{{profile.createdAt}}</p>
+        <p>Craftsman </p><p> since </p><p> {{profile.updatedAt}}</p>
+      </div>
+    </div>
+  </div>
+  <div class="buttons">
+    <button mat-button class="top-right-button">Edit Profile</button>
+    <button mat-button class="top-right-button" [routerLink]="['/subscriptions']">Sign Out</button>
+    <button mat-button class="top-right-button" [routerLink]="['/subscriptions']">Delete Account</button>
+  </div>
+</mat-card>
