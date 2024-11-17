@@ -1,0 +1,66 @@
+<!-- Contenedor para añadir un nuevo stand -->
+<div class="new-stand-container">
+  <input
+    [(ngModel)]="newStandName"
+    type="text"
+    placeholder="Enter new stand name"
+    class="new-stand-input"
+  />
+  <button (click)="addNewStand()" class="add-stand-btn">Add Stand</button>
+</div>
+
+<!-- Lista de stands -->
+<div *ngFor="let stand of stands" class="stand-container">
+  <div class="stand-header">
+    <h3>Stand {{ stand.standName }}</h3>
+    <button (click)="deleteStand(stand.id)" class="delete-stand-btn">Delete Stand</button>
+  </div>
+  <div class="materials-container">
+    <!-- Botón para añadir material -->
+    <div class="material-card add-material-card" (click)="openAddMaterialModal(stand.id)">
+      <p>New Material</p>
+    </div>
+    <!-- Lista de materiales -->
+    <div *ngFor="let material of stand.materials" class="material-card">
+      <p>{{ material.name }}</p>
+      <p>Quantity: {{ material.quantity }}</p>
+      <button class="open-btn" (click)="openMaterialDetails(material)">Open</button>
+    </div>
+  </div>
+</div>
+
+<!-- Modal para añadir material -->
+<div *ngIf="isAddMaterialModalOpen" class="modal">
+  <div class="modal-content">
+    <button class="close-btn" (click)="closeAddMaterialModal()">X</button>
+    <h2>New Material</h2>
+    <form (ngSubmit)="addMaterialToStand()">
+      <label for="materialName">Name</label>
+      <input id="materialName" [(ngModel)]="newMaterialName" name="materialName" required />
+
+      <label for="materialQuantity">Quantity</label>
+      <input
+        id="materialQuantity"
+        type="number"
+        [(ngModel)]="newMaterialQuantity"
+        name="materialQuantity"
+        required
+      />
+
+      <button type="submit" class="add-btn">Add</button>
+    </form>
+  </div>
+</div>
+
+<!-- Modal para detalles del material -->
+<div *ngIf="selectedMaterial" class="modal">
+  <div class="modal-content">
+    <button class="close-btn" (click)="closeModal()">X</button>
+    <h2>Material Details</h2>
+    <p><strong>ID:</strong> {{ selectedMaterial.id }}</p>
+    <p><strong>Name:</strong> {{ selectedMaterial?.name }}</p>
+    <p><strong>Quantity:</strong> {{ selectedMaterial?.quantity }}</p>
+    <p><strong>Stand ID:</strong> {{ selectedMaterial?.stand }}</p>
+    <button class="delete-btn" (click)="deleteMaterial(selectedMaterial.id)">Delete</button>
+  </div>
+</div>
