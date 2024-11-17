@@ -77,6 +77,11 @@ export class PostManagementComponent implements OnInit {
       disableClose: false,
       panelClass: 'custom-dialog-container'
     });
+
+    dialogRef.componentInstance.postAddRequested.subscribe((newPost: Post) => {
+      this.dataSource.data.unshift(newPost);
+      this.dataSource.data = this.dataSource.data;
+    });
   }
   private createPost() {
     this.postService.create(this.postData).subscribe((response: Post) => {

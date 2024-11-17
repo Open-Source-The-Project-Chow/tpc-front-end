@@ -36,7 +36,7 @@ import {PostService} from '../../services/post.service';
 export class PostCreateComponent {
   @Input() post!: Post;
   @Input() editMode: boolean = false;
-  @Output() protected postAddRequested = new EventEmitter<Post>();
+  @Output() postAddRequested = new EventEmitter<Post>();
   @Output() protected postUpdateRequested = new EventEmitter<Post>();
   @Output() protected cancelRequested = new EventEmitter<void>();
   @ViewChild('PostForm', {static: false}) protected postForm!: NgForm;
