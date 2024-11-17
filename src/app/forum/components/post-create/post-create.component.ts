@@ -8,6 +8,7 @@ import {MatDialogActions, MatDialogContent, MatDialogRef, MatDialogTitle} from "
 import {NgIf} from "@angular/common";
 import {MatCard, MatCardActions, MatCardContent} from "@angular/material/card";
 import {MatIcon} from "@angular/material/icon";
+import {PostService} from '../../services/post.service';
 
 @Component({
   selector: 'app-post-create',
@@ -30,17 +31,17 @@ import {MatIcon} from "@angular/material/icon";
     MatIconButton
   ],
   templateUrl: './post-create.component.html',
-  styleUrl: './post-create.component.css'
+  styleUrls: ['./post-create.component.css']
 })
 export class PostCreateComponent {
   @Input() post!: Post;
   @Input() editMode: boolean = false;
-  @Output() protected postAddRequested = new EventEmitter<Post>();
+  @Output() postAddRequested = new EventEmitter<Post>();
   @Output() protected postUpdateRequested = new EventEmitter<Post>();
   @Output() protected cancelRequested = new EventEmitter<void>();
   @ViewChild('PostForm', {static: false}) protected postForm!: NgForm;
 
-  constructor(private dialogRef: MatDialogRef<PostCreateComponent>) {
+  constructor(private dialogRef: MatDialogRef<PostCreateComponent>, private postService: PostService) {
     this.post = new Post({});
   }
 
@@ -55,13 +56,29 @@ export class PostCreateComponent {
 
   protected onSubmit() {
     if (this.isValid()) {
-      let emitter = this.isEditMode()? this.postUpdateRequested : this.postAddRequested;
-      emitter.emit(this.post);
-      this.resetEditState();
+      if (this.isEditMode()) {
+        this.postUpdateRequested.emit(this.post);
+      } else {
+        // Hardcode the image URL
+        this.post.image = 'https://tienda.figurasperuanas.com/wp/wp-content/uploads/2023/01/Captura-de-pantalla-2023-04-17-a-las-16.51.40.png';
+
+        this.postService.createPost(this.post).subscribe(
+          response => {
+            console.log('Post created successfully', response);
+            this.postAddRequested.emit(response);
+            this.resetEditState();
+          },
+          error => {
+            console.error('Error creating post', error);
+            alert(error); // Display the error message to the user
+          }
+        );
+      }
     } else {
       console.error('Invalid form data');
     }
   }
+
   protected onClose() {
     this.dialogRef.close();
   }
@@ -75,7 +92,11 @@ export class PostCreateComponent {
     const input = event.target as HTMLInputElement;
     if (input.files && input.files.length > 0) {
       const file = input.files[0];
-      console.log('Archivo seleccionado:', file);
+      const reader = new FileReader();
+      reader.onload = (e: any) => {
+        this.post.image = e.target.result;
+      };
+      reader.readAsDataURL(file);
     }
   }
 }

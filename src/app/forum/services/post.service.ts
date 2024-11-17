@@ -13,4 +13,7 @@ export class PostService extends BaseService<Post>{
   getPostById(id: string): Observable<Post> {
     return this.getById(id);
   }
+  createPost(post: Post): Observable<Post> {
+    return this.http.post<Post>(`${this.basePath}${this.resourceEndpoint}`, post);
+  }
 }
