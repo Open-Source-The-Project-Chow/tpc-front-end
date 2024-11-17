@@ -3,7 +3,75 @@
     <h1 class="auth-title">Sign Up</h1>
     <form [formGroup]="form" (ngSubmit)="onSubmit()">
       <div class="auth-input-group">
-        <label for="username">Email</label>
+        <label for="firstName">First Name</label>
+        <input
+          id="firstName"
+          type="text"
+          placeholder="Enter your firstName"
+          formControlName="firstName"
+          class="auth-input"
+        />
+        <span *ngIf="form.get('firstName')?.invalid && form.get('firstName')?.touched" class="auth-error">
+          Password must be at least 6 characters.
+        </span>
+      </div>
+      <div class="auth-input-group">
+        <label for="lastName">Last Name</label>
+        <input
+          id="lastName"
+          type="text"
+          placeholder="Enter your lastName"
+          formControlName="lastName"
+          class="auth-input"
+        />
+        <span *ngIf="form.get('lastName')?.invalid && form.get('lastName')?.touched" class="auth-error">
+          Password must be at least 6 characters.
+        </span>
+      </div>
+      <div class="auth-input-group">
+        <label for="email">Email</label>
+        <input
+          id="email"
+          type="text"
+          placeholder="Enter your email"
+          formControlName="email"
+          class="auth-input"
+        />
+        <span *ngIf="form.get('email')?.invalid && form.get('email')?.touched" class="auth-error">
+          Password must be at least 6 characters.
+        </span>
+      </div>
+      <div class="auth-input-group">
+        <label for="phone">Phone</label>
+        <input
+          id="phone"
+          type="text"
+          placeholder="Enter your phone"
+          formControlName="phone"
+          class="auth-input"
+        />
+        <span *ngIf="form.get('phone')?.invalid && form.get('phone')?.touched" class="auth-error">
+          Password must be at least 6 characters.
+        </span>
+      </div>
+      <div class="auth-input-group">
+        <label for="image">image</label>
+        <input
+          id="image"
+          type="text"
+          placeholder="Enter your image"
+          formControlName="image"
+          class="auth-input"
+        />
+        <span *ngIf="form.get('image')?.invalid && form.get('image')?.touched" class="auth-error">
+          Password must be at least 6 characters.
+        </span>
+      </div>
+
+
+
+      <div class="auth-input-group">
+        <label for="username">Username</label>
         <input
           id="username"
           type="text"
@@ -29,47 +97,21 @@
           Password must be at least 6 characters.
         </span>
       </div>
-      <div class="auth-input-group">
-        <label for="firstName">First Name</label>
-        <input
-          id="firstName"
-          type="text"
-          placeholder="Enter your firstName"
-          formControlName="firstName"
-          class="auth-input"
-        />
-        <span *ngIf="form.get('firstName')?.invalid && form.get('firstName')?.touched" class="auth-error">
-          Password must be at least 6 characters.
-        </span>
-      </div>
+
 
       <div class="auth-input-group">
-        <label for="lastName">Last Name</label>
-        <input
-          id="lastName"
-          type="text"
-          placeholder="Enter your lastName"
-          formControlName="lastName"
-          class="auth-input"
-        />
-        <span *ngIf="form.get('lastName')?.invalid && form.get('lastName')?.touched" class="auth-error">
-          Password must be at least 6 characters.
-        </span>
+        <label for="roles">Roles</label>
+        <select id="roles" formControlName="roles" class="auth-input">
+          <option value="ROLE_CRAFTSMAN">Craftsman</option>
+          <option value="ROLE_BUYER">Buyer</option>
+          <!-- Agrega más opciones según sea necesario -->
+        </select>
+        <span *ngIf="form.get('roles')?.invalid && form.get('roles')?.touched" class="auth-error">
+    Please select a role.
+  </span>
       </div>
 
-      <div class="auth-input-group">
-        <label for="phoneNumber">Phone</label>
-        <input
-          id="phoneNumber"
-          type="text"
-          placeholder="Enter your phoneNumber"
-          formControlName="phoneNumber"
-          class="auth-input"
-        />
-        <span *ngIf="form.get('phoneNumber')?.invalid && form.get('phoneNumber')?.touched" class="auth-error">
-          Password must be at least 6 characters.
-        </span>
-      </div>
+
 
       <button type="submit" class="auth-button">Sign Up</button>
       <a class="auth-link" routerLink="/sign-in">Already have an account? Sign In</a>

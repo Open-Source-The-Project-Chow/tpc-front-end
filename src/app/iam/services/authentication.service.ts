@@ -43,7 +43,8 @@ export class AuthenticationService {
   }
 
   signUp(signUpRequest: SignUpRequest): Observable<SignUpResponse> {
-    return this.http.post<SignUpResponse>(`${this.basePath}/authentication/sign-up`, signUpRequest, this.httpOptions);
+    //return this.http.post<SignUpResponse>(`${this.basePath}/authentication/sign-up`, signUpRequest, this.httpOptions);
+    return this.http.post<SignUpResponse>(`${this.basePath}/profiles`, signUpRequest, this.httpOptions);
   }
 
   signIn(signInRequest: SignInRequest): Observable<SignInResponse> {

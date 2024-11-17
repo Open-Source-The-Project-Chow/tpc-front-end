@@ -58,9 +58,9 @@
     <button class="close-btn" (click)="closeModal()">X</button>
     <h2>Material Details</h2>
     <p><strong>ID:</strong> {{ selectedMaterial.id }}</p>
-    <p><strong>Name:</strong> {{ selectedMaterial?.name }}</p>
-    <p><strong>Quantity:</strong> {{ selectedMaterial?.quantity }}</p>
-    <p><strong>Stand ID:</strong> {{ selectedMaterial?.stand }}</p>
+    <p><strong>Name:</strong> {{ selectedMaterial.name }}</p>
+    <p><strong>Quantity:</strong> {{ selectedMaterial.quantity }}</p>
+    <p><strong>Stand ID:</strong> {{ selectedMaterial.stand }}</p>
     <button class="delete-btn" (click)="deleteMaterial(selectedMaterial.id)">Delete</button>
   </div>
 </div>

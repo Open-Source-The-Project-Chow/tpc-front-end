@@ -36,12 +36,27 @@ export class SignInPageComponent extends BaseFormComponent implements OnInit{
   }
 
   onSubmit() {
-    if (this.form.invalid) return;
+    /*if (this.form.invalid) return;
     let username = this.form.value.username;
     let password = this.form.value.password;
     const signInRequest = new SignInRequest(username, password);
     this.authService.signIn(signInRequest);
     this.submitted = true;
-    this.router.navigate(['/home']);
+    this.router.navigate(['/home']);*/
+    if (this.form.invalid) return;
+    const { username, password } = this.form.value;
+    const signInRequest = new SignInRequest(username, password);
+    this.authService.signIn(signInRequest).subscribe({
+      next: (response) => {
+        // Almacena el token en localStorage
+        localStorage.setItem('token', response.token);
+        console.log('Sign in successful', response);
+        this.submitted = true;
+        this.router.navigate(['/home']);
+      },
+      error: (error) => {
+        console.error('Error signing in', error);
+      }
+    });
   }
 }

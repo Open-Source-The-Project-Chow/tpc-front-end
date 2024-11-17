@@ -1,15 +1,21 @@
 export class SignUpRequest {
-  public email: string;
-  public password: string;
   public firstName: string;
   public lastName: string;
-  public phoneNumber: string;
+  public email: string;
+  public phone: string;
+  public image: string;
+  public username: string;
+  public password: string;
+  public roles: string[];
 
-  constructor(email: string, password: string, firstName: string, lastName: string, phoneNumber: string) {
-    this.email = email;
-    this.password = password;
+  constructor(firstName: string, lastName: string, email: string, phone: string, image: string, username: string, password: string, roles: string[]) {
     this.firstName = firstName;
     this.lastName = lastName;
-    this.phoneNumber = phoneNumber;
+    this.email = email;
+    this.phone = phone;
+    this.image = image;
+    this.username = username;
+    this.password = password;
+    this.roles = roles;
   }
 }

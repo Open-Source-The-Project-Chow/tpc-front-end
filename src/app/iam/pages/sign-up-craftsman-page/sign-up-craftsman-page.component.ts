@@ -28,19 +28,21 @@ export class SignUpCraftsmanPageComponent extends BaseFormComponent implements O
 
   ngOnInit(): void {
     this.form = this.builder.group({
-      username: ['', Validators.required],
-      password: ['', Validators.required],
       firstName: ['', Validators.required],
       lastName: ['', Validators.required],
-      phoneNumber: ['', Validators.required],
-      role: ['ROL_ENTREPRENEUR', Validators.required]
+      email: ['', Validators.required],
+      phone: ['', Validators.required],
+      image: ['', Validators.required],
+      username: ['', Validators.required],
+      password: ['', Validators.required],
+      roles: [['ROLE_CRAFTSMAN'], Validators.required]
     });
   }
 
   onSubmit(): void {
     if (this.form.invalid) return;
-    const { username, password, firstName,lastName,phoneNumber} = this.form.value;
-    const signUpRequest = new SignUpRequest(username, password, firstName,lastName,phoneNumber);
+    const {  firstName,lastName, email, phone, image, username, password, roles} = this.form.value;
+    const signUpRequest = new SignUpRequest( firstName,lastName, email, phone, image, username, password, roles);
     this.authService.signUp(signUpRequest).subscribe({
       next: () => {
         this.submitted = true;
