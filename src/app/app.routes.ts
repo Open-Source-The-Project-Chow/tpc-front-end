@@ -8,11 +8,19 @@ import {MaterialManagementComponent} from "./inventory/pages/material-management
 import {LoginComponent} from "./public/pages/login/login.component";
 import {ItemsPageComponent} from "./orders/pages/items-page/items-page.component";
 import {ProductInfoViewComponent} from "./orders/pages/product-info-view/product-info-view.component";
+import {SignInPageComponent} from "./iam/pages/sign-in-page/sign-in-page.component";
+import {ChooseRolePageComponent} from "./iam/pages/choose-role-page/choose-role-page.component";
+import {SignUpCraftsmanPageComponent} from "./iam/pages/sign-up-craftsman-page/sign-up-craftsman-page.component";
+import {SignUpBuyerPageComponent} from "./iam/pages/sign-up-buyer-page/sign-up-buyer-page.component";
 
 
 
 export const routes: Routes = [
-  { path: 'login', component: LoginComponent},
+  { path: 'sign-in', component: SignInPageComponent},
+  { path: 'choose-role', component: ChooseRolePageComponent },
+  { path: 'sign-up-craftsman', component: SignUpCraftsmanPageComponent },
+  { path: 'sign-up-buyer', component: SignUpBuyerPageComponent },
+  { path: 'home', component: ItemsPageComponent},
   { path: 'craftsman/orders', component: ItemsPageComponent},
   { path: 'craftsman/orders/product-info/:id', component: ProductInfoViewComponent},
   { path: 'inventory', component: MaterialManagementComponent},
@@ -20,6 +28,6 @@ export const routes: Routes = [
   { path: 'forum/post-view/:id', component: PostViewComponent },
   { path: 'profile', component: OwnProfileComponent},
   { path: 'subscriptions', component: SubscriptionsComponent },
-  { path: '',                 redirectTo: 'login', pathMatch: 'full'},
+  { path: '',                 redirectTo: 'sign-in', pathMatch: 'full'},
   { path: '**',               component: PageNotFoundComponent}
 ];
