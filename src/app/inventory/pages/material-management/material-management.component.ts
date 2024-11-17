@@ -1,34 +1,35 @@
-import {Component, inject, OnInit} from '@angular/core';
-import {MaterialService} from "../../services/material.service";
-import {Material} from "../../model/material.entity";
-import {MaterialListComponent} from "../../components/material-list/material-list.component";
+import { Component, inject, OnInit } from '@angular/core';
+import { StandService } from '../../services/stand.service';
+import { Stand } from '../../model/stand.entity';
+import { StandListComponent } from '../../components/stand-list/stand-list.component';
 
 @Component({
   selector: 'app-material-management',
   standalone: true,
-  imports: [
-    MaterialListComponent
-  ],
   templateUrl: './material-management.component.html',
-  styleUrl: './material-management.component.css'
+  styleUrls: ['./material-management.component.css'],
+  imports: [
+    StandListComponent
+  ]
 })
 export class MaterialManagementComponent implements OnInit {
+  stands: Stand[] = []; // Propiedad para almacenar los stands
 
-  //#region Attributes
-  protected materialData!: Material;
-  protected materials: Array<Material> = [];
-  private materialService: MaterialService = inject(MaterialService);
-
-  constructor() {
-    this.materialData = new Material({});
-  }
+  private standService: StandService = inject(StandService);
 
   ngOnInit(): void {
-    this.getAllMaterials();
+    this.loadStands();
   }
 
-  private getAllMaterials() {
-    this.materialService.getAll().subscribe((response: Array<Material>) => this.materials = response);
+  // Cargar los stands desde el servicio
+  private loadStands() {
+    this.standService.getAllStands().subscribe(
+      (data) => {
+        this.stands = data;
+      },
+      (error) => {
+        console.error('Error fetching stands:', error);
+      }
+    );
   }
-
 }
