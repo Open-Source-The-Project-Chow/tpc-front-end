@@ -1,14 +1,15 @@
 import { Injectable } from '@angular/core';
-import {BaseService} from "../../shared/services/base.service";
-import {Material} from "../model/material.entity";
+import { BaseService } from '../../shared/services/base.service';
+import { Material } from '../model/material.entity';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
-export class MaterialService extends BaseService<Material>{
-
+export class MaterialService extends BaseService<Material> {
   constructor() {
     super();
-    this.resourceEndpoint = '/materials';
+    this.resourceEndpoint = '/materials'; // Endpoint específico para materiales
   }
+
+
 }

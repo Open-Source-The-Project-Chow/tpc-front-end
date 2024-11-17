@@ -1,8 +1,9 @@
 export class Material {
-  id: number;
+  id?: number;
   name: string;
   quantity: number;
   stand: string;
+  inventoryId?: number;
 
   constructor( material: { id?: number, name?: string, quantity?: number, stand?: string }) {
     this.id = material.id || 0;
